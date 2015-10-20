@@ -1,0 +1,8 @@
+.DS_Store
+public/*
+config.ini
+latest-change.txt
+*-ck.js
+*.sass-cache/
+bower_components
+node_modules

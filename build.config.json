@@ -1,0 +1,68 @@
+{
+  "root": "./public",
+  "deployment": {
+    "local": {
+      "path": "public"
+    },
+    "remote": {
+      "host": "YOUR HOST"
+    },
+    "rsync": {
+      "options": "-avzh --delete -e ssh"
+    }
+  },
+  "assets": {
+    "base": "source/assets/",
+    "dest": "public/assets/"
+  },
+  "versioning": {
+    "files": [
+      "./package.json",
+      "./bower.json"
+    ]
+  },
+  "scripts": {
+    "base"  : "source/assets/javascripts/",
+    "files" : [
+      "source/assets/javascripts/**/*.js"
+    ],
+    "dest"  : "public/assets/javascripts/"
+  },
+  "components": {
+    "base": "source/assets/components/"
+  },
+  "scss": {
+    "base" : "source/assets/scss/",
+    "files": [
+      "source/assets/scss/**/*.scss"
+    ],
+    "dest" : "public/assets/stylesheets/"
+  },
+  "fonts": {
+    "base" : "source/assets/fonts/",
+    "files": [
+      "source/assets/fonts/**/*"
+    ],
+    "dest" : "public/assets/fonts/"
+  },
+  "images": {
+    "base" : "source/assets/images/",
+    "files": [
+      "source/assets/images/**/*"
+    ],
+    "dest" : "public/assets/images/"
+  },
+  "patternlab": {
+    "styleguide": {
+      "files": [
+        "core/styleguide/**"
+      ],
+      "dest": "public/styleguide/"
+    },
+    "files": [
+      "source/_patterns/**/*.mustache",
+      "source/_patterns/**/*.json",
+      "source/_data/*.json"
+    ]
+  }
+}
